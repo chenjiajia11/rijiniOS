@@ -33,7 +33,7 @@ nativeFunction: function(method, parameter, success, fail) {
 
     // 这是classid,在下面的PluginResult进行数据的返回时,将会用到它
     self.callbackID = [arguments pop];
-    NSLog(@"====%@",self.callbackID);
+//    NSLog(@"====%@",self.callbackID);
     // 得到Javascript端发送过来的字符串
     NSString *stringObtainedFromJavascript = [arguments objectAtIndex:0];
     
