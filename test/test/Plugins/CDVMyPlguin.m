@@ -33,7 +33,7 @@ nativeFunction: function(method, parameter, success, fail) {
 
     // 这是classid,在下面的PluginResult进行数据的返回时,将会用到它
     self.callbackID = [arguments pop];
-    NSLog(@"====%@",self.callbackID);
+//    NSLog(@"====%@",self.callbackID);
     // 得到Javascript端发送过来的字符串
     NSString *stringObtainedFromJavascript = [arguments objectAtIndex:0];
     
@@ -45,7 +45,7 @@ nativeFunction: function(method, parameter, success, fail) {
     // Create Plugin Result
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: stringToReturn];
     
-    NSLog(@ "%@",stringToReturn);
+//    NSLog(@ "%@",stringToReturn);
     
     // 检查发送过来的字符串是否等于"HelloWorld",如果不等,就以PluginResult的Error形式返回
     if ([stringObtainedFromJavascript isEqualToString:@"HelloWorld"] == YES){
